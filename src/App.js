@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+
+// Styles
+import "./App.css";
+
+// Components
+import SearchBar from "./components/SearchBar";
+import MoviesList from "./components/MoviesList";
+
+// Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+library.add(faXmark);
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [data, setData] = useState({});
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="side-menu">
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        <MoviesList movies={data} />
+      </div>
     </div>
   );
 }
