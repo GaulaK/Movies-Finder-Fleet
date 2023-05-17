@@ -1,8 +1,18 @@
-# Getting Started with Create React App
+# Movies Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Little Application to search movies and get informations about it. Use the [TMDB API](https://www.themoviedb.org/).
 
-## Available Scripts
+## Install dependencies
+
+Your can use yarn to install packages with the command:
+
+`yarn install`
+
+or use npm:
+
+`npm install`
+
+## Launch
 
 In the project directory, you can run:
 
@@ -68,4 +78,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Movies-Finder-Fleet" 
+"# Movies-Finder-Fleet"
