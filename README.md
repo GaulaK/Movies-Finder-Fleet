@@ -4,7 +4,7 @@ Little Application to search movies and get informations about it. Use the [TMDB
 
 ## Install dependencies
 
-Your can use yarn to launch the project with the command:
+Your can use yarn to install packages with the command:
 
 `yarn install`
 
