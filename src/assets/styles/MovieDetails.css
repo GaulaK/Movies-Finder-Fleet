@@ -1,0 +1,13 @@
+.movie-informations {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.poster-container {
+  width: 300px;
+}
+
+.poster-container > img {
+  width: 100%;
+}
