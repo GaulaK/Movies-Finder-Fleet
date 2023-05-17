@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --black: #1e2124;
+  --light-black: #292b2f;
+  --gray: gray;
+  --white: var(--white);
+}
+.side-menu {
+  background-color: var(--light-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 100vh;
+  border-right: 1px solid var(--light-black);
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--white);
+  padding: 0 10% 0 50px;
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.separator {
+  margin: 20px 0;
+  width: 80%;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+.logo-github-container {
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+.logo-github-container img {
+  height: 100%;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  .App .side-menu {
+    height: auto;
+  }
+}

@@ -1,0 +1,110 @@
+.main-movie-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.movie-information {
+  flex: 1;
+}
+
+.poster-container {
+  width: 300px;
+}
+
+.poster-container > img {
+  width: 100%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.poster-container > div {
+  width: 100%;
+  height: 400px;
+  border: 1px solid var(--light-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.genres-movies {
+  font-style: italic;
+  color: var(--gray);
+  margin-top: 5px;
+}
+
+.rate-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.rate-container .rate {
+  font-size: 24px;
+}
+
+.rate-container .users-quantity,
+.rate-container .fa-user {
+  font-size: 18px;
+  color: var(--gray);
+  margin-left: 5px;
+}
+
+.rate-container .fa-user {
+  font-size: 15px;
+}
+
+.rate-container p {
+  font-size: 12px;
+}
+
+.movie-details {
+  border: 1px solid var(--gray);
+  max-width: fit-content;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie-details .duration,
+.movie-details .release-date,
+.movie-details .vote {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.movie-details .icon-container {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-details .fa-hourglass,
+.movie-details .fa-calendar-days,
+.movie-details .fa-star {
+  color: var(--light-black);
+}
+
+.movie-overview {
+  margin-top: 20px;
+  width: 80%;
+  line-height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .main-movie-content {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}

@@ -1,7 +1,9 @@
 //  Styles
 import "../assets/styles/SearchBar.css";
 
+// Packages
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   const handleInputUpdate = (event) => {
     setSearchQuery(event.target.value);
@@ -15,7 +17,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search a movie..."
+        placeholder="Rechercher un film"
         value={searchQuery}
         onChange={handleInputUpdate}
       />
