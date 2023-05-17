@@ -11,6 +11,7 @@ import gitHubLogo from "./assets/img/github-mark-white.png";
 import SearchBar from "./components/SearchBar";
 import MoviesList from "./components/MoviesList";
 import MovieDetails from "./components/MovieDetails";
+import PlaceHolder from "./components/Placeholder";
 
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -21,8 +22,18 @@ import {
   faCalendarDays,
   faStar,
   faFilm,
+  faClapperboard,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faXmark, faUser, faHourglass, faCalendarDays, faStar, faFilm);
+
+library.add(
+  faXmark,
+  faUser,
+  faHourglass,
+  faCalendarDays,
+  faStar,
+  faFilm,
+  faClapperboard
+);
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,11 +44,18 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://api.themoviedb.org/3/search/movie?api_key=88c5a19f4a328426dd5694b0f06eb4a6&language=fr-FR&page=1&include_adult=false&query=${searchQuery}`
-        );
-        // console.log(response.data);
-        setData(response.data);
+        if (searchQuery) {
+          const response = await axios.get(
+            `https://api.themoviedb.org/3/search/movie?api_key=88c5a19f4a328426dd5694b0f06eb4a6&language=fr-FR&page=1&include_adult=false&query=${searchQuery}`
+          );
+          setData(response.data);
+        } else {
+          // By default, display Trendings movies (choose by the API)
+          const response = await axios.get(
+            `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=88c5a19f4a328426dd5694b0f06eb4a6`
+          );
+          setData(response.data);
+        }
       } catch (error) {
         console.log(error);
       }
@@ -80,7 +98,11 @@ function App() {
         </div>
       </div>
       <div className="main-content">
-        {selectedMovie && <MovieDetails selectedMovie={selectedMovie} />}
+        {selectedMovie ? (
+          <MovieDetails selectedMovie={selectedMovie} />
+        ) : (
+          <PlaceHolder />
+        )}
       </div>
     </div>
   );
