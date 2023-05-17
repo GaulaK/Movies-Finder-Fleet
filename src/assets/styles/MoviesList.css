@@ -1,33 +1,51 @@
 .movies-list {
-  background-color: green;
+  /* background-color: green; */
   height: 70%;
   width: 100%;
   flex-wrap: nowrap;
-  overflow: scroll;
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.movies-list::-webkit-scrollbar {
-  display: none;
+  overflow-y: scroll;
 }
 
 .movies-list li {
   display: flex;
   align-items: center;
   padding: 0 5%;
-  background-color: purple;
-  border: 1px solid gray;
+
+  /* border-top: 1px solid gray; */
+
   height: 50px;
 
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: pointer;
-
-  font-size: 24px;
+  font-size: 15px;
   color: white;
+}
+.movies-list li:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+/* Custom scroll bar */
+
+/* Firefox */
+.movies-list {
+  scrollbar-width: thin;
+  scrollbar-color: #1e2124 #ffffff;
+}
+
+/* Chrome, Edge and Safari */
+.movies-list::-webkit-scrollbar {
+  width: 7px;
+  width: 7px;
+}
+
+.movies-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #1e2124;
+}
+
+.movies-list::-webkit-scrollbar-thumb:hover {
+  background-color: #1e2124;
+}
+
+.movies-list::-webkit-scrollbar-thumb:active {
+  background-color: #1e2124;
 }

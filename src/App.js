@@ -5,6 +5,7 @@ import axios from "axios";
 
 // Styles
 import "./App.css";
+import gitHubLogo from "./assets/img/github-mark-white.png";
 
 // Components
 import SearchBar from "./components/SearchBar";
@@ -13,8 +14,15 @@ import MovieDetails from "./components/MovieDetails";
 
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-library.add(faXmark);
+import {
+  faXmark,
+  faUser,
+  faHourglass,
+  faCalendarDays,
+  faStar,
+  faFilm,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faXmark, faUser, faHourglass, faCalendarDays, faStar, faFilm);
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -64,6 +72,10 @@ function App() {
           movies={data}
           handleUpdateSelectedMovie={handleUpdateSelectedMovie}
         />
+        <div className="separator"></div>
+        <div className="logo-github-container">
+          <img alt="logo GitHub" src={gitHubLogo} />
+        </div>
       </div>
       <div className="main-content">
         {selectedMovie && <MovieDetails selectedMovie={selectedMovie} />}

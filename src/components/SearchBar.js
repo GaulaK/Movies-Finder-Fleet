@@ -15,7 +15,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search a movie..."
+        placeholder="Rechercher un film"
         value={searchQuery}
         onChange={handleInputUpdate}
       />
