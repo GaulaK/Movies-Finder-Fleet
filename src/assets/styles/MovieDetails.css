@@ -1,11 +1,17 @@
-.movie-informations {
+.main-movie-content {
   margin-top: 30px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  gap: 50px;
+}
+
+.movie-information {
+  flex: 1;
 }
 
 .poster-container {
-  width: 30%;
+  width: 300px;
 }
 
 .poster-container > img {
@@ -92,6 +98,13 @@
 
 .movie-overview {
   margin-top: 20px;
-  width: calc(100% - 350px);
+  width: 80%;
   line-height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .main-movie-content {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }

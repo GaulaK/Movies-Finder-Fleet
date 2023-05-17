@@ -18,8 +18,8 @@ const MovieDetails = ({ selectedMovie }) => {
   };
   return (
     <div>
-      <div className="movie-informations">
-        <div>
+      <div className="main-movie-content">
+        <div className="movie-information">
           <div>
             <h2>{selectedMovie.title}</h2>
           </div>
@@ -88,8 +88,12 @@ const MovieDetails = ({ selectedMovie }) => {
           )}
         </div>
       </div>
-      <h2>Synopsis</h2>
-      <p className="movie-overview">{selectedMovie.overview}</p>
+      {selectedMovie.overview ? (
+        <>
+          <h2>Synopsis</h2>
+          <p className="movie-overview">{selectedMovie.overview}</p>
+        </>
+      ) : null}
     </div>
   );
 };

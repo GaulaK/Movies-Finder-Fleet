@@ -9,10 +9,8 @@
   align-items: center;
 
   width: 300px;
-  /* max-width: 300px; */
   height: 100vh;
   border-right: 1px solid #292b2f;
-  /* padding-top: 50px; */
 }
 
 .main-content {
@@ -35,6 +33,7 @@
 
 .logo-github-container {
   height: 40px;
+  margin-bottom: 50px;
 }
 
 .logo-github-container img {
@@ -51,4 +50,11 @@ h3 {
   font-weight: bold;
   font-size: 24px;
   margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  .App .side-menu {
+    /* flex-grow: 1; */
+    height: auto;
+  }
 }

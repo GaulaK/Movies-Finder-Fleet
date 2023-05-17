@@ -1,6 +1,6 @@
 .movies-list {
   /* background-color: green; */
-  height: 70%;
+  height: 70vh;
   width: 100%;
   flex-wrap: nowrap;
   overflow-y: scroll;
@@ -49,3 +49,9 @@
 .movies-list::-webkit-scrollbar-thumb:active {
   background-color: #1e2124;
 }
+
+/* @media (max-width: 1024px) {
+  .side-menu {
+    height: 100%;
+  }
+} */

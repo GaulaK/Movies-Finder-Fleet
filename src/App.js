@@ -74,7 +74,9 @@ function App() {
         />
         <div className="separator"></div>
         <div className="logo-github-container">
-          <img alt="logo GitHub" src={gitHubLogo} />
+          <a href="https://github.com/GaulaK/Movies-Finder-Fleet">
+            <img alt="logo GitHub" src={gitHubLogo} />
+          </a>
         </div>
       </div>
       <div className="main-content">
