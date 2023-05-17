@@ -12,13 +12,12 @@
   width: 50%;
   height: 50%;
   opacity: 10%;
-  color: gray;
+  color: var(--gray);
 }
 
 .placeholder-content p {
-  width: 50%;
   text-align: center;
   font-size: 3vh;
   opacity: 30%;
-  color: gray;
+  color: var(--gray);
 }

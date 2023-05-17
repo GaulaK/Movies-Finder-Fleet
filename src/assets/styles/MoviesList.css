@@ -1,8 +1,6 @@
 .movies-list {
-  /* background-color: green; */
   height: 70vh;
   width: 100%;
-  flex-wrap: nowrap;
   overflow-y: scroll;
 }
 
@@ -10,16 +8,12 @@
   display: flex;
   align-items: center;
   padding: 0 5%;
-
-  /* border-top: 1px solid gray; */
-
   height: 50px;
-
   font-size: 15px;
   color: white;
 }
 .movies-list li:hover {
-  background-color: gray;
+  background-color: var(--gray);
   cursor: pointer;
 }
 
@@ -28,7 +22,7 @@
 /* Firefox */
 .movies-list {
   scrollbar-width: thin;
-  scrollbar-color: #1e2124 #ffffff;
+  scrollbar-color: var(--black) var(--white);
 }
 
 /* Chrome, Edge and Safari */
@@ -39,19 +33,13 @@
 
 .movies-list::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #1e2124;
+  background-color: var(--black);
 }
 
 .movies-list::-webkit-scrollbar-thumb:hover {
-  background-color: #1e2124;
+  background-color: var(--black);
 }
 
 .movies-list::-webkit-scrollbar-thumb:active {
-  background-color: #1e2124;
+  background-color: var(--black);
 }
-
-/* @media (max-width: 1024px) {
-  .side-menu {
-    height: 100%;
-  }
-} */

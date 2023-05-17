@@ -1,21 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+:root {
+  --black: #1e2124;
+  --light-black: #292b2f;
+  --gray: gray;
+  --white: var(--white);
+}
 .side-menu {
-  background-color: #292b2f;
-
+  background-color: var(--light-black);
   display: flex;
   flex-direction: column;
-
   align-items: center;
-
   width: 300px;
   height: 100vh;
-  border-right: 1px solid #292b2f;
+  border-right: 1px solid var(--light-black);
 }
 
 .main-content {
   flex: 1;
-  background-color: white;
+  background-color: var(--white);
   padding: 0 10% 0 50px;
 }
 
@@ -29,7 +32,7 @@
   margin: 20px 0;
   width: 80%;
   height: 1px;
-  background-color: gray;
+  background-color: var(--gray);
 }
 
 .logo-github-container {
@@ -42,7 +45,6 @@
 }
 
 h2 {
-  /* color: white; */
   font-size: 32px;
   font-weight: bold;
 }
@@ -55,7 +57,6 @@ h3 {
 
 @media (max-width: 1024px) {
   .App .side-menu {
-    /* flex-grow: 1; */
     height: auto;
   }
 }
