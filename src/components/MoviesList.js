@@ -2,7 +2,6 @@
 import "../assets/styles/MoviesList.css";
 
 const MoviesList = ({ movies, handleUpdateSelectedMovie }) => {
-  // console.log(movies);
   return (
     <ul className="movies-list">
       {movies.results

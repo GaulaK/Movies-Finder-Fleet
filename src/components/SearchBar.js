@@ -1,7 +1,9 @@
 //  Styles
 import "../assets/styles/SearchBar.css";
 
+// Packages
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   const handleInputUpdate = (event) => {
     setSearchQuery(event.target.value);

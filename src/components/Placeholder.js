@@ -1,6 +1,9 @@
+// Packages
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// Styles
 import "../assets/styles/PlaceHolder.css";
+
 const PlaceHolder = () => {
   return (
     <div className="placeholder-content">

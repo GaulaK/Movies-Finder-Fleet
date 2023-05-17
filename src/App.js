@@ -78,14 +78,10 @@ function App() {
     }
   };
 
-  // console.log(selectedMovie);
-
   return (
     <div className="App">
       <div className="side-menu">
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        {/* Change by data state */}
-
         <MoviesList
           movies={data}
           handleUpdateSelectedMovie={handleUpdateSelectedMovie}
@@ -101,6 +97,7 @@ function App() {
         {selectedMovie ? (
           <MovieDetails selectedMovie={selectedMovie} />
         ) : (
+          // Case when user launch the site
           <PlaceHolder />
         )}
       </div>
